@@ -1,0 +1,14 @@
+<p>All Movies Found</p>
+
+<div *ngFor="let m of moviesList">{{ m.title }}</div>
+
+
+<h1>Add Movie</h1>
+<label>Title</label>
+<input type= "text" [(ngModel)]="newMovie.title" />
+<br />
+<br />
+<label>Created By </label>
+<input type= "text" [(ngModel)]="newMovie.createdBy"/>
+<br />
+<button (click)="addMovie()">Add Movie</button> <!-- bind onlick event -->
