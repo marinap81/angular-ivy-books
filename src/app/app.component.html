@@ -12,3 +12,7 @@
 <input type= "text" [(ngModel)]="newMovie.createdBy"/>
 <br />
 <button (click)="addMovie()">Add Movie</button> <!-- bind onlick event -->
+<br />
+<br />
+<h2>Delete a Movie</h2>
+<div *ngFor="let m of moviesList">{{ m.title }}<button (click)="deleteMovie(m.title)">Remove</button></div>

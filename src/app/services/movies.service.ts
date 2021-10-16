@@ -28,5 +28,11 @@ export class MoviesService {
 
   }
 
+  deleteMovie(movietitle) {
+  
+    return this.http.delete(`${this.apiURL}movies/`+movietitle);
+  }
+    
+
 
 }

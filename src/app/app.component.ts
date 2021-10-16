@@ -33,8 +33,18 @@ getMovies(){
 addMovie() {
 this.moviesService.addMovie(this.newMovie).subscribe((data) => { //listening for data from api
   console.log(data);
+  //reload Movies once new movie added
+  this.getMovies();
 
  });
+}
+ deleteMovie(title) {
+
+  this.moviesService.deleteMovie(title).subscribe((data) => {
+    console.log('Received after remove: ', data);
+    // reload movies
+    this.getMovies();
+  });
 
 }
 }
